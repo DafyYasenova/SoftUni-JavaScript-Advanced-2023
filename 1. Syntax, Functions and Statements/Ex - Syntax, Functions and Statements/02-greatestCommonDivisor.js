@@ -22,3 +22,15 @@ function greatestCommonDivisor(firstNum, secondNum) {
 }
 greatestCommonDivisor(15, 5);
 greatestCommonDivisor(2154, 458);
+
+// 3 way:
+function greatestCommonDivisor(firstNum, secondNum) {
+    while (secondNum) {
+     let  temp = secondNum;
+       secondNum = firstNum % secondNum;
+       firstNum = temp;
+    }
+    console.log(firstNum);
+}
+greatestCommonDivisor(15, 5);
+greatestCommonDivisor(2154, 458);
