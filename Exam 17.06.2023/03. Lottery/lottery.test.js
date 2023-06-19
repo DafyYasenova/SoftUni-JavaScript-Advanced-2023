@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-let lottery= require('./lottery')
+let lottery = require('./lottery')
 
 
 describe("lottery", () => {
@@ -64,12 +64,10 @@ describe("lottery", () => {
 
     it("if ticketID is not mach", () => {
       assert.equal(lottery.secondChance(5, [1, 2, 3, 8, 9, 10]), "Sorry, your ticket didn't win!")
-
-      it("if mached", () => {
-
-        assert.equal(lottery.secondChance(5, [1, 2, 5, 8, 9, 10]), "You win our second chance prize!")
-      });
-
     });
-  })
+    it("if mached", () => {
+
+      assert.equal(lottery.secondChance(5, [1, 2, 5, 8, 9, 10]), "You win our second chance prize!")
+    });
+  });
 });
